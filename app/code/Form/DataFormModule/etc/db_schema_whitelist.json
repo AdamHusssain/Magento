@@ -1,0 +1,21 @@
+{
+    "detail_save": {
+        "column": {
+            "id": true,
+            "employeeid": true,
+            "firstname": true,
+            "lastname": true,
+            "email": true,
+            "company": true,
+            "department": true,
+            "occupation": true,
+            "mobile": true,
+            "address": true,
+            "joiningdate": true,
+            "birthday": true
+        },
+        "constraint": {
+            "PRIMARY": true
+        }
+    }
+}

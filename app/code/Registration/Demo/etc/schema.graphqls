@@ -1,0 +1,36 @@
+type Query 
+    {
+        custinfo:custinfoOutput @resolver(class:"Registration\\Demo\\Model\\Resolver\\Customer")@doc(description:"Customer Details")
+    }
+type custinfoOutput 
+    {
+        total_count:Int @doc(description:"Total No. of Customers"),
+        items:[custinfo] @doc(description:"Customer Data")
+    }
+type custinfo
+    {
+        firstname:String @doc(description:"Customer First Name"),
+        lastname:String @doc(description:"Customer Last Name"),
+        email:String @doc(description:"Customer Email"),
+        mobile:String @doc(description:"Customer Mobile"),
+        city:String @doc(description:"Customer City"),
+        state:String @doc(description:"Customer State"),
+        country:String @doc(description:"Customer Country"),
+    }
+
+
+
+type Mutation {
+    addDetails (input: detailsInput! @doc(description:"An input you have to fill")):
+    addDetailsOutput @resolver(class : "Registration\\Demo\\Model\\Resolver\\CustomerDisplay")
+    @doc(description: "Mutation output")
+}
+
+input detailsInput {
+    groupName:String! @doc(description: "Enter groupName")
+}
+
+type addDetailsOutput {
+    groupName:String @doc(description: "Mutation message")
+}
+

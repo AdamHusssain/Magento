@@ -1,0 +1,28 @@
+<?php 
+$test=$block->getArticles();
+
+foreach($test as $data):
+    
+?>
+<table border 2>
+    <tr>
+<td><?php echo $data->getemployeeid(); ?></td>
+<td><?php echo $data->getfirstname(); ?></td>
+<td><?php echo $data->getlastname(); ?></td>
+
+<td><?php echo $data->getemail(); ?></td>
+
+<td><?php echo $data->getcompany(); ?></td>
+
+<td><?php echo $data->getdepartment(); ?></td>
+
+<td><?php echo $data->getoccupation(); ?></td>
+
+<td><?php echo $data->getmobile(); ?></td>
+<td><?php echo $data->getaddress(); ?></td>
+<td><?php echo $data->getjoiningdate(); ?></td>
+<td><?php echo $data->getbirthday(); ?></td>
+</tr>
+
+
+<?php endforeach; ?></table>
