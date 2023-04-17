@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="EmbitelTech_UiModule::uimodule" title="UiModule" translate="title" module="EmbitelTech_UiModule" sortOrder="10" 
+         resource="EmbitelTech_UiModule::uimodule"/>
+        <add id="EmbitelTech_UiModule::Embitel_manage" title="All Customers" translate="title" module="Magento_Customer" sortOrder="10" parent="EmbitelTech_UiModule::uimodule" action="uimodule/index" resource="Magento_Customer::manage"/>        
+    </menu>
+</config>
